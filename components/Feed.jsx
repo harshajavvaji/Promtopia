@@ -22,6 +22,19 @@ const PromptCardList = ({ data, handleTagClick }) => {
   );
 };
 
+// const PromptCardListWrapper = ({ isSignedIn, data, handleTagClick }) => {
+//   return (
+//     <div>
+//       {isSignedIn ? (
+//         <PromptCardList data={data} handleTagClick={handleTagClick} />
+//       ) : (
+//         <p>Please sign in to view prompts.</p> // Message or alternative content
+//       )}
+//     </div>
+//   );
+// };
+
+
 const Feed = () => {
   const [searchText, setSearchText] = useState('');
   const [searchTimeout, setSearchTimeout] = useState(null);
@@ -88,6 +101,7 @@ const Feed = () => {
           className="search_input peer"
         />
       </form>
+      
       <PromptCardList
         data={searchText ? searchedResults || [] : posts || []} // Ensure data defaults to an array
         handleTagClick={handleTagClick}

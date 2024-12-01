@@ -4,7 +4,7 @@ import Link from "next/link";
 // Helps us to optimize images
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { signIn, SignOut, useSession, getProviders, signOut } from 'next-auth/react';
+import { signIn, useSession, getProviders, signOut } from 'next-auth/react';
 
 const Nav = () => {
   // const isUserLoggedIn = true;
